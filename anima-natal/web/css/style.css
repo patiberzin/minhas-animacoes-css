@@ -1,0 +1,44 @@
+
+* {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+.background {
+    width: 700px;
+    height: 700px;
+    display: block;
+    position: fixed;
+    margin: 0 auto;
+}
+
+.ball {
+    border-radius: 50%;
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    background-color: rgb(221, 9, 9);
+    margin-top: 525px;
+    margin-left: 190px;
+    position: relative;    
+}
+
+@keyframes neon {
+    from {
+        filter: drop-shadow(0 0 0 var(--cor-neon));
+    }
+    to {
+        filter: drop-shadow(0 0 30px var(--cor-neon));
+    }
+}
+
+.ball {
+    animation: neon 1s alternate infinite ease-in-out;
+    --cor-neon: rgb(25, 0, 255);
+}
+
+.ball:hover {
+    background-color: red;
+}
+
